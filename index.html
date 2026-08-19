@@ -1,94 +1,131 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sergio Sbardella</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-html, body {
-    margin: 0;
-    height: 100%;
-}
+    <title>Sergio Sbardella</title>
 
-body {
-    background: #D8C04A;
-    font-family: 'Inter', sans-serif;
-    position: relative;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-.main {
-    position: absolute;
-    left: 12%;
-    top: 50%;
-    transform: translateY(-50%);
-}
+    <style>
 
-h1 {
-    font-size: 5.5rem;
-    font-weight: 600;
-    letter-spacing: -0.04em;
-    margin: 0;
-    line-height: 0.95;
-}
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-.subtitle {
-    margin-top: 24px;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
+        html, body{
+            height:100%;
+        }
 
-.email {
-    margin-top: 12px;
-    font-size: 1rem;
-}
+        body{
+            background:#D8C04A;
+            font-family:'Inter',sans-serif;
+            color:#000;
+            position:relative;
+        }
 
-.email a {
-    color: black;
-    text-decoration: none;
-}
+        .hero{
+            position:absolute;
+            left:12%;
+            top:50%;
+            transform:translateY(-50%);
+        }
 
-.nav {
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-    text-align: right;
-}
+        h1{
+            font-size:4.2rem;
+            font-weight:600;
+            letter-spacing:-0.05em;
+            line-height:0.95;
+        }
 
-.nav a {
-    display: block;
-    color: black;
-    text-decoration: none;
-    margin-bottom: 6px;
-    font-size: 0.9rem;
-}
+        .role{
+            margin-top:32px;
+            font-size:1.15rem;
+            font-weight:400;
+        }
 
-.nav a:hover {
-    text-decoration: underline;
-}
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        .email{
+            margin-top:18px;
+            font-size:1rem;
+        }
+
+        .email a{
+            color:#000;
+            text-decoration:none;
+        }
+
+        .email a:hover{
+            text-decoration:underline;
+        }
+
+        .menu{
+            position:absolute;
+            right:40px;
+            bottom:40px;
+            text-align:right;
+        }
+
+        .menu a{
+            display:block;
+            color:#000;
+            text-decoration:none;
+            font-size:0.9rem;
+            margin-bottom:8px;
+        }
+
+        .menu a:hover{
+            text-decoration:underline;
+        }
+
+        @media (max-width:768px){
+
+            .hero{
+                left:32px;
+                right:32px;
+            }
+
+            h1{
+                font-size:2.8rem;
+            }
+
+            .menu{
+                right:32px;
+                bottom:32px;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-<div class="main">
-    <h1>SERGIO SBARDELLA</h1>
-    <div class="subtitle">Architetto</div>
-    <div class="email">
-        <a href="mailto:sbardellasergio@gmail.com">
-            sbardellasergio@gmail.com
-        </a>
-    </div>
-</div>
+    <div class="hero">
 
-<div class="nav">
-    <a href="#">Profilo</a>
-    <a href="#">Progetti</a>
-    <div>↓</div>
-</div>
+        <h1>SERGIO SBARDELLA</h1>
+
+        <div class="role">
+            Architetto
+        </div>
+
+        <div class="email">
+            <a href="mailto:sbardellasergio@gmail.com">
+                sbardellasergio@gmail.com
+            </a>
+        </div>
+
+    </div>
+
+    <div class="menu">
+        <a href="#">Profilo</a>
+        <a href="#">Progetti</a>
+    </div>
 
 </body>
+
 </html>
