@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Profilo — Sergio Sbardella</title>
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23D8C04A'/%3E%3C/svg%3E">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,29 +15,47 @@
 
     <style>
 
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
         body{
             font-family:'Inter',sans-serif;
-            margin:0;
+            color:#000;
+            background:#fff;
             padding:80px;
-            max-width:1100px;
-            line-height:1.6;
+            line-height:1.7;
+        }
+
+        .container{
+            max-width:900px;
         }
 
         h1{
             font-size:3rem;
             font-weight:600;
-            margin-bottom:10px;
+            letter-spacing:-0.04em;
+            margin-bottom:12px;
+        }
+
+        .subtitle{
+            font-size:1.1rem;
+            margin-bottom:60px;
         }
 
         h2{
-            margin-top:80px;
-            margin-bottom:30px;
-            font-size:1.3rem;
-            font-weight:500;
+            font-size:1rem;
+            font-weight:600;
+            margin-top:70px;
+            margin-bottom:25px;
+            text-transform:uppercase;
+            letter-spacing:0.08em;
         }
 
         p{
-            max-width:700px;
+            margin-bottom:22px;
         }
 
         ul{
@@ -43,15 +64,38 @@
         }
 
         li{
-            margin-bottom:14px;
+            margin-bottom:10px;
         }
 
-        .back{
+        .home{
             position:fixed;
             top:40px;
             right:40px;
             text-decoration:none;
-            color:black;
+            color:#000;
+            font-size:0.9rem;
+        }
+
+        .home:hover{
+            text-decoration:underline;
+        }
+
+        @media(max-width:768px){
+
+            body{
+                padding:40px 30px;
+            }
+
+            h1{
+                font-size:2.2rem;
+            }
+
+            .home{
+                position:static;
+                display:block;
+                margin-bottom:40px;
+            }
+
         }
 
     </style>
@@ -60,39 +104,92 @@
 
 <body>
 
-<a class="back" href="index.html">Home</a>
+<a class="home" href="index.html">Home</a>
+
+<div class="container">
 
 <h1>Sergio Sbardella</h1>
 
-<p>
+<div class="subtitle">
 Architetto<br>
 Specialista in Beni Architettonici e del Paesaggio
+</div>
+
+<p>
+Architetto libero professionista attivo nei settori della progettazione architettonica, del recupero del patrimonio costruito, delle opere pubbliche e della consulenza tecnico-amministrativa.
 </p>
 
 <p>
-Attività professionale nei settori della progettazione architettonica,
-del recupero del patrimonio costruito, delle opere pubbliche e del supporto
-tecnico-amministrativo ai processi di trasformazione del territorio.
+Le esperienze maturate nel corso degli anni spaziano dalla pianificazione e programmazione degli interventi alla progettazione architettonica e finanziaria, dalla progettazione di dettaglio e degli allestimenti agli interventi infrastrutturali, comprendendo inoltre attività di progettazione antincendio, supporto alla progettazione strutturale, direzione lavori, gestione tecnico-amministrativa e monitoraggio di programmi di investimento pubblico.
 </p>
+
+<p>
+L'esperienza professionale abbraccia pertanto diversi ambiti del settore delle costruzioni, integrando aspetti progettuali, tecnici, amministrativi e gestionali lungo l'intero ciclo di vita dell'intervento.
+</p>
+
+<h2>Ambiti di attività</h2>
+
+<ul>
+<li>Progettazione architettonica</li>
+<li>Recupero e riqualificazione del patrimonio costruito</li>
+<li>Restauro</li>
+<li>Interior design e allestimenti</li>
+<li>Opere pubbliche</li>
+<li>Supporto al RUP</li>
+<li>Studi di fattibilità e programmazione degli interventi</li>
+<li>Pratiche edilizie e autorizzative</li>
+<li>Direzione lavori</li>
+<li>Coordinamento tecnico-amministrativo</li>
+</ul>
 
 <h2>Collaborazioni</h2>
 
 <ul>
-
 <li>Comune di Longarone</li>
-
 <li>Eutalia S.r.l.</li>
-
 <li>Studiare Sviluppo S.r.l.</li>
-
+<li>Area Tecnica S.r.l.</li>
+<li>Archivio di Stato di Belluno</li>
 <li>Parcianello & Partners Engineering</li>
-
 <li>Tektra Architects</li>
-
 <li>SIT Belluno</li>
-
 </ul>
 
-</body>
+<p>
+Parallelamente alle collaborazioni con enti pubblici, società e studi professionali, l'attività si sviluppa attraverso incarichi diretti per committenti privati, con interventi che spaziano dalla riqualificazione edilizia agli spazi interni, dalla progettazione residenziale agli interventi sul patrimonio esistente.
+</p>
 
+<h2>Formazione</h2>
+
+<p>
+<strong>2026</strong><br>
+Diploma di Specializzazione in Beni Architettonici e del Paesaggio<br>
+Università IUAV di Venezia
+</p>
+
+<p>
+<strong>2015</strong><br>
+Laurea Magistrale in Architettura<br>
+Università IUAV di Venezia
+</p>
+
+<p>
+<strong>2012</strong><br>
+Laurea in Scienze dell'Architettura<br>
+Università IUAV di Venezia
+</p>
+
+<p>
+<strong>2009</strong><br>
+Abilitazione alla professione di Geometra
+</p>
+
+<p>
+<strong>2007</strong><br>
+Diploma di Perito Edile
+</p>
+
+</div>
+
+</body>
 </html>
