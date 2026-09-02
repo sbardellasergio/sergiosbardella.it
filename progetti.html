@@ -23,10 +23,13 @@
 }
 
 body{
-    background:#fff;
-    color:#000;
-    font-family:'Inter',sans-serif;
+    background:#ffffff;
+    color:#000000;
+    font-family:'Inter', sans-serif;
 }
+
+
+/* HEADER */
 
 header{
     padding:40px;
@@ -50,56 +53,105 @@ header{
     text-decoration:underline;
 }
 
+
+/* GRIGLIA */
+
 .projects{
-    padding:60px 6% 100px;
+    width:100%;
+    padding:70px 10% 120px;
+
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+
+    column-gap:70px;
+    row-gap:110px;
+
+    align-items:start;
 }
+
+
+/* PROGETTO */
 
 .project{
     display:block;
     width:100%;
+
     text-decoration:none;
     color:#000;
+
+    transition:opacity 0.3s ease;
 }
 
-.project-image{
-    width:75%;
-    margin:0 auto;
+.project img{
+    width:100%;
+    aspect-ratio:1 / 1;
+
+    object-fit:cover;
     display:block;
+
+    transition:opacity 0.3s ease;
 }
 
-.project-info{
-    width:75%;
-    margin:20px auto 0;
+.project:hover img{
+    opacity:0.82;
 }
 
-.project-title{
-    font-size:1.3rem;
-    font-weight:500;
-    margin-bottom:7px;
+
+/* SFALSAMENTO */
+
+.project:nth-child(2){
+    margin-top:70px;
 }
 
-.project-subtitle{
-    font-size:0.9rem;
-    font-weight:300;
+.project:nth-child(3){
+    margin-top:25px;
 }
 
-@media(max-width:768px){
+.project:nth-child(5){
+    margin-top:60px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .projects{
+        padding:50px 7% 80px;
+
+        grid-template-columns:repeat(2, 1fr);
+
+        column-gap:35px;
+        row-gap:70px;
+    }
+
+    .project:nth-child(2),
+    .project:nth-child(3),
+    .project:nth-child(5){
+        margin-top:0;
+    }
+
+}
+
+
+@media(max-width:600px){
 
     header{
         padding:25px;
     }
 
     .projects{
-        padding:40px 25px 70px;
+        padding:35px 25px 60px;
+
+        grid-template-columns:1fr;
+
+        row-gap:55px;
     }
 
-    .project-image,
-    .project-info{
-        width:100%;
-    }
-
-    .project-title{
-        font-size:1.1rem;
+    .project:nth-child(2),
+    .project:nth-child(3),
+    .project:nth-child(5){
+        margin-top:0;
     }
 
 }
@@ -108,7 +160,9 @@ header{
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -125,29 +179,21 @@ header{
 
 <main class="projects">
 
+
+    <!-- PONTE SUL PIAVE -->
+
     <a class="project" href="ponte-piave.html">
 
         <img
-            class="project-image"
             src="img/ponte-piave/r1.jpeg"
             alt="Nuovo Ponte sul Piave"
         >
 
-        <div class="project-info">
-
-            <div class="project-title">
-                NUOVO PONTE SUL PIAVE
-            </div>
-
-            <div class="project-subtitle">
-                Concorso internazionale di progettazione · 4° classificato
-            </div>
-
-        </div>
-
     </a>
 
+
 </main>
+
 
 </body>
 
