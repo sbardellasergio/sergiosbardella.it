@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Progetti — Sergio Sbardella</title>
+
+<link rel="icon" type="image/svg+xml"
+href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23d9c24f'/%3E%3C/svg%3E">
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:#d9c24f;
+    color:#000;
+    font-family:Helvetica, Arial, sans-serif;
+}
+
+/* HEADER */
+
+header{
+    padding:40px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.title{
+    font-size:18px;
+    font-weight:600;
+}
+
+.back{
+    text-decoration:none;
+    color:#000;
+    font-size:14px;
+}
+
+/* PROJECTS */
+
+.projects{
+    padding:40px 5% 80px 5%;
+
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:60px 30px;
+}
+
+.project{
+    position:relative;
+    display:block;
+    text-decoration:none;
+    color:#000;
+}
+
+.project img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* HOVER */
+
+.project-info{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    padding:30px;
+
+    background:rgba(217,194,79,0.94);
+
+    opacity:0;
+
+    transition:opacity 0.25s ease;
+}
+
+.project:hover .project-info{
+    opacity:1;
+}
+
+.project-title{
+    font-size:28px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.project-subtitle{
+    font-size:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header{
+        padding:25px 5%;
+    }
+
+    .projects{
+        grid-template-columns:1fr;
+        gap:40px;
+        padding:30px 5% 60px 5%;
+    }
+
+    .project-info{
+        position:relative;
+        opacity:1;
+        padding:18px 0 0 0;
+        background:none;
+    }
+
+    .project-title{
+        font-size:22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="title">
+        PROGETTI
+    </div>
+
+    <a class="back" href="index.html">
+        ← Home
+    </a>
+
+</header>
+
+
+<main class="projects">
+
+
+    <!-- PROGETTO 01 -->
+
+    <a class="project" href="ponte-piave.html">
+
+        <img src="img/ponte-piave/r3.jpeg" alt="Nuovo Ponte sul Piave">
+
+        <div class="project-info">
+
+            <div class="project-title">
+                NUOVO PONTE SUL PIAVE
+            </div>
+
+            <div class="project-subtitle">
+                Concorso internazionale di progettazione · 4° classificato
+            </div>
+
+        </div>
+
+    </a>
+
+
+</main>
+
+
+</body>
+
+</html>
