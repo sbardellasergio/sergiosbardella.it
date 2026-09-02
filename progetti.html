@@ -28,14 +28,10 @@ body{
     font-family:'Inter',sans-serif;
 }
 
-
-/* HEADER */
-
 header{
     padding:40px;
     display:flex;
     justify-content:space-between;
-    align-items:flex-start;
 }
 
 .title{
@@ -49,87 +45,43 @@ header{
     font-size:0.9rem;
 }
 
-.back:hover{
-    text-decoration:underline;
-}
-
-
-/* GRIGLIA */
-
 .projects{
     width:80%;
     max-width:1200px;
-
     margin:70px auto 120px;
 
     display:grid;
     grid-template-columns:repeat(3, 1fr);
-
-    column-gap:60px;
-    row-gap:100px;
+    gap:80px 60px;
 }
-
-
-/* PROGETTO */
 
 .project{
     display:block;
     text-decoration:none;
-    color:#000;
 }
 
-.project-image{
+.project img{
     width:100%;
     aspect-ratio:1.618 / 1;
-
-    display:block;
-
     object-fit:cover;
+    display:block;
 
     transition:opacity 0.25s ease;
 }
 
-.project:hover .project-image{
+.project:hover img{
     opacity:0.8;
 }
 
-
-/* TESTO */
-
-.project-info{
-    margin-top:18px;
-}
-
-.project-title{
-    font-size:0.95rem;
-    font-weight:500;
-    line-height:1.3;
-}
-
-.project-subtitle{
-    margin-top:5px;
-
-    font-size:0.78rem;
-    font-weight:300;
-    line-height:1.4;
-}
-
-
-/* TABLET */
-
-@media(max-width:1000px){
+@media(max-width:900px){
 
     .projects{
         width:88%;
         grid-template-columns:repeat(2, 1fr);
-        column-gap:40px;
-        row-gap:70px;
+        gap:60px 40px;
     }
 
 }
-
-
-/* MOBILE */
 
 @media(max-width:600px){
 
@@ -140,11 +92,8 @@ header{
     .projects{
         width:100%;
         padding:0 25px;
-
         grid-template-columns:1fr;
-
         margin-top:40px;
-        row-gap:60px;
     }
 
 }
@@ -153,9 +102,7 @@ header{
 
 </head>
 
-
 <body>
-
 
 <header>
 
@@ -169,40 +116,16 @@ header{
 
 </header>
 
-
 <main class="projects">
 
-
-    <!-- PROGETTO 01 -->
-
     <a class="project" href="ponte-piave.html">
-
         <img
-            class="project-image"
             src="img/ponte-piave/1.jpg"
             alt="Nuovo Ponte sul Piave"
         >
-
-        <div class="project-info">
-
-            <div class="project-title">
-                NUOVO PONTE SUL PIAVE
-            </div>
-
-            <div class="project-subtitle">
-                Concorso internazionale di progettazione · 4° classificato
-            </div>
-
-        </div>
-
     </a>
 
-
-    <!-- I PROSSIMI PROGETTI ANDRANNO QUI -->
-
-
 </main>
-
 
 </body>
 
