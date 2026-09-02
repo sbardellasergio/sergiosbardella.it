@@ -23,9 +23,9 @@
 }
 
 body{
-    background:#ffffff;
-    color:#000000;
-    font-family:'Inter', sans-serif;
+    background:#fff;
+    color:#000;
+    font-family:'Inter',sans-serif;
 }
 
 
@@ -54,7 +54,7 @@ header{
 }
 
 
-/* GRIGLIA PROGETTI */
+/* GRIGLIA */
 
 .projects{
     width:80%;
@@ -63,30 +63,24 @@ header{
     margin:70px auto 120px;
 
     display:grid;
+    grid-template-columns:repeat(3, 1fr);
 
-    grid-template-columns:repeat(3, 280px);
-
-    justify-content:space-between;
-
-    column-gap:40px;
+    column-gap:60px;
     row-gap:100px;
 }
 
 
-/* QUADRATI */
+/* PROGETTO */
 
 .project{
-    width:280px;
-    height:280px;
-
     display:block;
-
     text-decoration:none;
+    color:#000;
 }
 
-.project img{
-    width:280px;
-    height:280px;
+.project-image{
+    width:100%;
+    aspect-ratio:1.618 / 1;
 
     display:block;
 
@@ -95,19 +89,41 @@ header{
     transition:opacity 0.25s ease;
 }
 
-.project:hover img{
+.project:hover .project-image{
     opacity:0.8;
+}
+
+
+/* TESTO */
+
+.project-info{
+    margin-top:18px;
+}
+
+.project-title{
+    font-size:0.95rem;
+    font-weight:500;
+    line-height:1.3;
+}
+
+.project-subtitle{
+    margin-top:5px;
+
+    font-size:0.78rem;
+    font-weight:300;
+    line-height:1.4;
 }
 
 
 /* TABLET */
 
-@media(max-width:1050px){
+@media(max-width:1000px){
 
     .projects{
-        width:90%;
-        grid-template-columns:repeat(2, 280px);
-        justify-content:space-around;
+        width:88%;
+        grid-template-columns:repeat(2, 1fr);
+        column-gap:40px;
+        row-gap:70px;
     }
 
 }
@@ -115,7 +131,7 @@ header{
 
 /* MOBILE */
 
-@media(max-width:650px){
+@media(max-width:600px){
 
     header{
         padding:25px;
@@ -123,12 +139,11 @@ header{
 
     .projects{
         width:100%;
+        padding:0 25px;
+
+        grid-template-columns:1fr;
+
         margin-top:40px;
-
-        grid-template-columns:280px;
-
-        justify-content:center;
-
         row-gap:60px;
     }
 
@@ -163,24 +178,27 @@ header{
     <a class="project" href="ponte-piave.html">
 
         <img
-            src="img/ponte-piave/r1.jpeg"
+            class="project-image"
+            src="img/ponte-piave/1.jpg"
             alt="Nuovo Ponte sul Piave"
         >
 
+        <div class="project-info">
+
+            <div class="project-title">
+                NUOVO PONTE SUL PIAVE
+            </div>
+
+            <div class="project-subtitle">
+                Concorso internazionale di progettazione · 4° classificato
+            </div>
+
+        </div>
+
     </a>
 
 
-    <!--
-    I PROSSIMI PROGETTI ANDRANNO QUI
-
-    <a class="project" href="progetto-2.html">
-        <img src="img/progetto-2/copertina.jpg" alt="">
-    </a>
-
-    <a class="project" href="progetto-3.html">
-        <img src="img/progetto-3/copertina.jpg" alt="">
-    </a>
-    -->
+    <!-- I PROSSIMI PROGETTI ANDRANNO QUI -->
 
 
 </main>
