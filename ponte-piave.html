@@ -2,12 +2,17 @@
 <html lang="it">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nuovo Ponte sul Piave — Sergio Sbardella</title>
 
-<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23D8C04A'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,122 +23,217 @@
 }
 
 body{
-    background:#d9c24f;
+    background:#fff;
     color:#000;
-    font-family:Helvetica, Arial, sans-serif;
+    font-family:'Inter',sans-serif;
 }
+
+
+/* NAVIGAZIONE */
 
 .back{
     position:fixed;
     top:30px;
-    left:30px;
-    text-decoration:none;
+    left:40px;
+
     color:#000;
-    font-size:14px;
-    z-index:100;
-    mix-blend-mode:multiply;
+    text-decoration:none;
+
+    font-size:0.9rem;
+    z-index:10;
 }
 
-.hero{
-    width:100%;
-    min-height:100vh;
+.back:hover{
+    text-decoration:underline;
+}
+
+
+/* INTRODUZIONE */
+
+.intro{
+    width:80%;
+    max-width:1200px;
+
+    margin:130px auto 70px;
+
     display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:10%;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:60px;
 }
 
-h1{
-    font-size:clamp(42px,6vw,90px);
+.title{
+    font-size:2.5rem;
     line-height:1;
-    font-weight:700;
-    max-width:1000px;
+    font-weight:500;
+    letter-spacing:-0.04em;
 }
 
 .subtitle{
-    margin-top:25px;
-    font-size:18px;
-    line-height:1.6;
-    max-width:700px;
+    font-size:0.95rem;
+    font-weight:300;
+    line-height:1.5;
+    text-align:right;
 }
 
-.intro{
-    margin-top:50px;
-    max-width:800px;
-    font-size:16px;
-    line-height:1.8;
+
+/* IMMAGINE PRINCIPALE */
+
+.hero-image{
+    width:78%;
+    max-width:1200px;
+
+    margin:0 auto 110px;
+
+    display:block;
 }
+
+
+/* GALLERIA */
 
 .gallery{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    gap:60px;
-    padding-bottom:100px;
+    width:68%;
+    max-width:1000px;
+
+    margin:0 auto 120px;
 }
 
 .gallery img{
     width:100%;
     display:block;
+
+    margin-bottom:80px;
 }
 
-.footer{
-    padding:80px 10%;
-    font-size:14px;
+
+/* IMMAGINI TECNICHE */
+
+.gallery img.technical{
+    width:92%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .back{
+        top:20px;
+        left:25px;
+    }
+
+    .intro{
+        width:90%;
+        margin:100px auto 50px;
+
+        display:block;
+    }
+
+    .title{
+        font-size:2rem;
+    }
+
+    .subtitle{
+        margin-top:20px;
+        text-align:left;
+    }
+
+    .hero-image{
+        width:90%;
+        margin-bottom:70px;
+    }
+
+    .gallery{
+        width:90%;
+        margin-bottom:70px;
+    }
+
+    .gallery img{
+        margin-bottom:50px;
+    }
+
+    .gallery img.technical{
+        width:100%;
+    }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-<a class="back" href="progetti.html">← Progetti</a>
 
-<section class="hero">
+<a class="back" href="progetti.html">
+    ← Progetti
+</a>
 
-<h1>NUOVO PONTE SUL PIAVE</h1>
 
-<div class="subtitle">
-Concorso internazionale di progettazione a due gradi<br>
-4° classificato · 2020
-</div>
+<section class="intro">
 
-<div class="intro">
-Il progetto nasce nell'ambito del concorso internazionale per la realizzazione
-del nuovo ponte sul fiume Piave a Belluno.
+    <div class="title">
+        NUOVO PONTE<br>
+        SUL PIAVE
+    </div>
 
-La proposta affronta il tema dell'infrastruttura come elemento di connessione
-tra città, paesaggio e mobilità contemporanea, interpretando il ponte non solo
-come opera tecnica ma come nuovo spazio pubblico e segno territoriale capace
-di dialogare con il contesto urbano e ambientale.
-</div>
+    <div class="subtitle">
+        Concorso internazionale di progettazione<br>
+        4° classificato
+    </div>
 
 </section>
+
+
+<img
+    class="hero-image"
+    src="img/ponte-piave/r1.jpeg"
+    alt="Nuovo Ponte sul Piave"
+>
+
 
 <section class="gallery">
 
-<img src="img/ponte-piave/r3.jpeg" alt="Nuovo Ponte sul Piave">
+    <img
+        src="img/ponte-piave/r3.jpeg"
+        alt=""
+    >
 
-<img src="img/ponte-piave/tav1.jpeg" alt="Tavola di progetto">
+    <img
+        src="img/ponte-piave/tav1.jpeg"
+        alt=""
+    >
 
-<img src="img/ponte-piave/tav2.jpeg" alt="Tavola di progetto">
+    <img
+        src="img/ponte-piave/tav2.jpeg"
+        alt=""
+    >
 
-<img src="img/ponte-piave/tav3.jpeg" alt="Tavola di progetto">
+    <img
+        src="img/ponte-piave/tav3.jpeg"
+        alt=""
+    >
 
-<img src="img/ponte-piave/tav4jpeg.jpeg" alt="Tavola di progetto">
+    <img
+        src="img/ponte-piave/tav4jpeg.jpeg"
+        alt=""
+    >
 
-<img src="img/ponte-piave/r1.jpeg" alt="Render">
+    <img
+        src="img/ponte-piave/r2.jpeg"
+        alt=""
+    >
 
-<img src="img/ponte-piave/r2.jpeg" alt="Render">
-
-<img src="img/ponte-piave/volo-uccello.jpeg" alt="Vista aerea">
+    <img
+        src="img/ponte-piave/volo uccello.jpeg"
+        alt=""
+    >
 
 </section>
 
-<footer class="footer">
-Sergio Sbardella
-</footer>
 
 </body>
 
