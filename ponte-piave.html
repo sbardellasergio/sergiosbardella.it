@@ -12,6 +12,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -23,114 +24,88 @@
 }
 
 body{
-    background:#fff;
-    color:#000;
+    background:white;
+    color:black;
     font-family:'Inter',sans-serif;
 }
 
-
-/* NAVIGAZIONE */
-
 .back{
     position:fixed;
-
     top:30px;
-    left:40px;
-
-    color:#000;
+    left:30px;
     text-decoration:none;
-
-    font-size:0.9rem;
-
-    z-index:10;
+    color:black;
+    font-size:14px;
+    z-index:100;
 }
 
-.back:hover{
-    text-decoration:underline;
+.container{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:120px auto;
+
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:80px;
 }
 
+.info{
 
-/* TESTATA */
+    position:sticky;
+    top:120px;
 
-.intro{
-    width:78%;
-    max-width:1200px;
-
-    margin:120px auto 70px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
+    align-self:start;
 }
 
-.title{
-    font-size:2.4rem;
-    line-height:1;
-    font-weight:500;
-    letter-spacing:-0.04em;
+.info h1{
+
+    font-size:3.2rem;
+    line-height:0.95;
+    font-weight:600;
+
+    margin-bottom:40px;
 }
 
-.subtitle{
-    font-size:0.85rem;
-    font-weight:300;
-    line-height:1.5;
-    text-align:right;
+.info p{
+
+    font-size:1rem;
+    line-height:1.8;
 }
-
-
-/* GALLERIA */
 
 .gallery{
-    width:72%;
-    max-width:1100px;
 
-    margin:0 auto 120px;
+    display:flex;
+    flex-direction:column;
+    gap:50px;
 }
 
 .gallery img{
+
     width:100%;
-
-    aspect-ratio:1.618 / 1;
-
-    object-fit:cover;
+    max-width:1000px;
 
     display:block;
-
-    margin-bottom:80px;
 }
 
+@media(max-width:900px){
 
-/* MOBILE */
+    .container{
 
-@media(max-width:700px){
-
-    .back{
-        top:20px;
-        left:25px;
+        grid-template-columns:1fr;
+        gap:60px;
     }
 
-    .intro{
-        width:90%;
-        margin:100px auto 50px;
+    .info{
 
-        display:block;
+        position:relative;
+        top:auto;
     }
 
-    .title{
-        font-size:2rem;
-    }
+    .info h1{
 
-    .subtitle{
-        margin-top:20px;
-        text-align:left;
-    }
-
-    .gallery{
-        width:90%;
-    }
-
-    .gallery img{
-        margin-bottom:50px;
+        font-size:2.3rem;
     }
 
 }
@@ -139,43 +114,38 @@ body{
 
 </head>
 
-
 <body>
 
-
 <a class="back" href="progetti.html">
-    ← Progetti
+← Progetti
 </a>
 
+<div class="container">
 
-<section class="intro">
+    <div class="info">
 
-    <div class="title">
-        NUOVO PONTE<br>
-        SUL PIAVE
+        <h1>
+            NUOVO PONTE<br>
+            SUL PIAVE
+        </h1>
+
+        <p>
+            Concorso internazionale di progettazione<br><br>
+            4° classificato
+        </p>
+
     </div>
 
-    <div class="subtitle">
-        Concorso internazionale di progettazione<br>
-        4° classificato
+    <div class="gallery">
+
+        <img src="img/ponte-piave/1.jpg" alt="">
+        <img src="img/ponte-piave/2.jpg" alt="">
+        <img src="img/ponte-piave/3.jpg" alt="">
+        <img src="img/ponte-piave/4.jpg" alt="">
+
     </div>
 
-</section>
-
-
-<section class="gallery">
-
-    <img src="img/ponte-piave/1.jpg" alt="">
-
-    <img src="img/ponte-piave/2.jpg" alt="">
-
-    <img src="img/ponte-piave/3.jpg" alt="">
-
-    <img src="img/ponte-piave/4.jpg" alt="">
-
-</section>
-
+</div>
 
 </body>
-
 </html>
