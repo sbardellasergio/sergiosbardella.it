@@ -12,6 +12,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -23,8 +24,8 @@
 }
 
 body{
-    background:#fff;
-    color:#000;
+    background:#ffffff;
+    color:#000000;
     font-family:'Inter',sans-serif;
 }
 
@@ -32,11 +33,13 @@ header{
     padding:40px;
     display:flex;
     justify-content:space-between;
+    align-items:center;
 }
 
 .title{
     font-size:0.9rem;
     font-weight:500;
+    letter-spacing:0.02em;
 }
 
 .back{
@@ -45,55 +48,94 @@ header{
     font-size:0.9rem;
 }
 
+.back:hover{
+    text-decoration:underline;
+}
+
+
+/* GRIGLIA */
+
 .projects{
-    width:80%;
-    max-width:1200px;
-    margin:70px auto 120px;
+
+    width:90%;
+    max-width:1400px;
+
+    margin:80px auto 120px;
 
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:80px 60px;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:80px;
 }
+
+
+/* CARD */
 
 .project{
-    display:block;
+
     text-decoration:none;
+    color:#000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:opacity .25s ease;
 }
+
+.project:hover{
+    opacity:.85;
+}
+
+
+/* IMMAGINI */
 
 .project img{
-    width:100%;
-    aspect-ratio:1.618 / 1;
-    object-fit:cover;
+
+    max-width:100%;
+    max-height:420px;
+
+    width:auto;
+    height:auto;
+
     display:block;
-
-    transition:opacity 0.25s ease;
 }
 
-.project:hover img{
-    opacity:0.8;
-}
 
-@media(max-width:900px){
+/* MOBILE */
+
+@media(max-width:1000px){
 
     .projects{
-        width:88%;
-        grid-template-columns:repeat(2, 1fr);
-        gap:60px 40px;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:60px;
     }
 
 }
 
-@media(max-width:600px){
+@media(max-width:700px){
 
     header{
         padding:25px;
     }
 
     .projects{
+
         width:100%;
+
         padding:0 25px;
+
         grid-template-columns:1fr;
-        margin-top:40px;
+
+        gap:50px;
+    }
+
+    .project img{
+
+        max-height:320px;
     }
 
 }
@@ -116,26 +158,33 @@ header{
 
 </header>
 
+
 <main class="projects">
 
+    <!-- PONTE SUL PIAVE -->
+
     <a class="project" href="ponte-piave.html">
+
         <img
             src="img/ponte-piave/1.jpg"
             alt="Nuovo Ponte sul Piave"
         >
+
     </a>
-    
-<a class="project" href="appartamento-mp.html">
 
-    <img
-        src="img/appartamento-mp/7.png"
-        alt="Appartamento M+P"
-    >
 
-</a>
-    
+    <!-- APPARTAMENTO M+P -->
+
+    <a class="project" href="appartamento-mp.html">
+
+        <img
+            src="img/appartamento-mp/7.png"
+            alt="Appartamento M+P"
+        >
+
+    </a>
+
 </main>
 
 </body>
-
 </html>
