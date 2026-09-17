@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Modolo T — Sergio Sbardella</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f7f7f7;
+    color:#000;
+    font-family:'Inter',sans-serif;
+}
+
+.back{
+    position:fixed;
+    top:30px;
+    left:30px;
+    text-decoration:none;
+    color:#000;
+    font-size:14px;
+    z-index:100;
+}
+
+.project-header{
+    max-width:1400px;
+    margin:120px auto 100px;
+    padding:0 60px;
+}
+
+.project-title h1{
+    font-size:54px;
+    line-height:0.95;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.project-title p{
+    font-size:15px;
+    line-height:1.6;
+}
+
+.gallery{
+    max-width:1400px;
+    margin:0 auto 120px;
+    padding:0 60px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+.gallery img{
+    width:100%;
+    display:block;
+}
+
+@media(max-width:900px){
+
+    .project-header{
+        padding:0 30px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+        padding:0 30px;
+    }
+
+    .project-title h1{
+        font-size:38px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<a class="back" href="progetti.html">← Progetti</a>
+
+<section class="project-header">
+
+    <div class="project-title">
+
+        <h1>
+            MODOLO T
+        </h1>
+
+        <p>
+            Nuova residenza unifamiliare.<br><br>
+
+            Collaborazione professionale con
+            Arch. Renzo Sossai e P. Ind. Alberto Menegon.<br><br>
+
+            Belluno · 2020–2022
+        </p>
+
+    </div>
+
+</section>
+
+<section class="gallery">
+
+    <img src="img/modolo-t/1.jpg" alt="">
+    <img src="img/modolo-t/2.jpg" alt="">
+    <img src="img/modolo-t/3.jpg" alt="">
+    <img src="img/modolo-t/4.jpg" alt="">
+
+</section>
+
+</body>
+</html>
