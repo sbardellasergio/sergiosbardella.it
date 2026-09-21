@@ -30,6 +30,26 @@ body{
     font-family:'Inter',sans-serif;
 }
 
+.menu{
+    position:fixed;
+    top:30px;
+    right:30px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    z-index:100;
+}
+
+.menu a{
+    color:#000;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.menu a:hover{
+    text-decoration:underline;
+}
+    
 header{
     padding:40px;
     display:flex;
@@ -147,6 +167,14 @@ header{
 
 <body>
 
+<nav class="menu">
+    <a href="index.html">Home</a>
+    <span>·</span>
+    <a href="profilo.html">Profilo</a>
+    <span>·</span>
+    <a href="progetti.html">Progetti</a>
+</nav>
+    
 <header>
 
     <div class="title">
