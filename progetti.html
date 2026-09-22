@@ -80,13 +80,6 @@ header{
     gap:80px;
 }
 
-/* permette alle immagini casuali
-   di usare la stessa griglia */
-
-#random-gallery{
-    display:contents;
-}
-
 /* CARD */
 
 .project{
@@ -214,50 +207,6 @@ header{
         <img src="img/modolo-t/2.jpg" alt="Modolo T">
     </a>
 
-    <!-- IMMAGINI CASUALI -->
-    <div id="random-gallery"></div>
-
 </main>
-
-<script>
-
-const immagini = [
-
-    {src:"img/appartamento-mp/3.png", link:"appartamento-mp.html"},
-    {src:"img/appartamento-mp/5.png", link:"appartamento-mp.html"},
-
-    {src:"img/appartamento-l-cia/4.png", link:"appartamento-l-cia.html"},
-    {src:"img/appartamento-l-cia/9.png", link:"appartamento-l-cia.html"},
-
-    {src:"img/fortogna/2.png", link:"fortogna.html"},
-
-    {src:"img/codissago/2.jpg", link:"codissago.html"},
-
-    {src:"img/modolo-t/1.jpg", link:"modolo-t.html"}
-
-];
-
-const gallery = document.getElementById("random-gallery");
-
-const randomizzate = [...immagini]
-    .sort(() => Math.random() - 0.5);
-
-randomizzate.forEach(img => {
-
-    const a = document.createElement("a");
-    a.href = img.link;
-    a.className = "project";
-
-    const image = document.createElement("img");
-    image.src = img.src;
-    image.alt = "";
-
-    a.appendChild(image);
-    gallery.appendChild(a);
-
-});
-
-</script>
-
 </body>
 </html>
