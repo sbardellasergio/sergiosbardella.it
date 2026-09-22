@@ -12,6 +12,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link rel="canonical" href="https://sergiosbardella.it/progetti.html">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -49,7 +50,7 @@ body{
 .menu a:hover{
     text-decoration:underline;
 }
-    
+
 header{
     padding:40px;
     display:flex;
@@ -62,17 +63,6 @@ header{
     font-weight:500;
     letter-spacing:0.02em;
 }
-
-.back{
-    color:#000;
-    text-decoration:none;
-    font-size:0.9rem;
-}
-
-.back:hover{
-    text-decoration:underline;
-}
-
 
 /* GRIGLIA */
 
@@ -90,6 +80,12 @@ header{
     gap:80px;
 }
 
+/* permette alle immagini casuali
+   di usare la stessa griglia */
+
+#random-gallery{
+    display:contents;
+}
 
 /* CARD */
 
@@ -109,7 +105,6 @@ header{
     opacity:.85;
 }
 
-
 /* IMMAGINI */
 
 .project img{
@@ -122,7 +117,6 @@ header{
 
     display:block;
 }
-
 
 /* MOBILE */
 
@@ -174,7 +168,7 @@ header{
     <span>·</span>
     <a href="progetti.html">Progetti</a>
 </nav>
-    
+
 <header>
 
     <div class="title">
@@ -183,87 +177,87 @@ header{
 
 </header>
 
-
 <main class="projects">
 
     <!-- PONTE SUL PIAVE -->
-
     <a class="project" href="ponte-piave.html">
-
-        <img
-            src="img/ponte-piave/1.jpg"
-            alt="Nuovo Ponte sul Piave"
-        >
-
+        <img src="img/ponte-piave/1.jpg" alt="Nuovo Ponte sul Piave">
     </a>
 
-
     <!-- APPARTAMENTO M+P -->
-
     <a class="project" href="appartamento-mp.html">
-
-        <img
-            src="img/appartamento-mp/7.png"
-            alt="Appartamento M+P"
-        >
+        <img src="img/appartamento-mp/7.png" alt="Appartamento M+P">
+    </a>
 
     <!-- CONSERVAZIONE E TRANSIZIONE ENERGETICA -->
-
     <a class="project" href="conservazione-transizione-energetica.html">
+        <img src="img/tesi/11.jpg" alt="Conservazione e Transizione Energetica">
+    </a>
 
-    <img
-        src="img/tesi/11.jpg"
-        alt="Conservazione e Transizione Energetica"
-    >
-     </a>
-
-      <!-- APPARTAMENTO L+CIA -->
-    
+    <!-- APPARTAMENTO L+CIA -->
     <a class="project" href="appartamento-l-cia.html">
+        <img src="img/appartamento-l-cia/8.png" alt="Appartamento L+CIA">
+    </a>
 
-    <img
-        src="img/appartamento-l-cia/8.png"
-        alt="Appartamento L+CIA"
-    >
-            
-     <!-- CIMITERO FORTOGNA -->
-            
+    <!-- CIMITERO FORTOGNA -->
     <a class="project" href="fortogna.html">
+        <img src="img/fortogna/1.png" alt="Cimitero di Fortogna">
+    </a>
 
-    <img
-        src="img/fortogna/1.png"
-        alt="Cimitero di Fortogna"
-    >
-    
-        <!-- CIMITERO CODISSAGO -->
-        
-        <a class="project" href="codissago.html">
+    <!-- CIMITERO CODISSAGO -->
+    <a class="project" href="codissago.html">
+        <img src="img/codissago/1.jpg" alt="Cimitero di Codissago">
+    </a>
 
-    <img
-        src="img/codissago/1.jpg"
-        alt="Cimitero di Codissago"
-    >
-           
-        <!-- MODOLO T -->
+    <!-- MODOLO T -->
+    <a class="project" href="modolo-t.html">
+        <img src="img/modolo-t/2.jpg" alt="Modolo T">
+    </a>
 
-<a class="project" href="modolo-t.html">
-
-    <img
-        src="img/modolo-t/2.jpg"
-        alt="Modolo T"
-    >
-
-</a>
-            
-</a>
-
-</a>
-
-</a>
-
-</a>
+    <!-- IMMAGINI CASUALI -->
+    <div id="random-gallery"></div>
 
 </main>
+
+<script>
+
+const immagini = [
+
+    {src:"img/appartamento-mp/3.png", link:"appartamento-mp.html"},
+    {src:"img/appartamento-mp/5.png", link:"appartamento-mp.html"},
+
+    {src:"img/appartamento-l-cia/4.png", link:"appartamento-l-cia.html"},
+    {src:"img/appartamento-l-cia/9.png", link:"appartamento-l-cia.html"},
+
+    {src:"img/fortogna/2.png", link:"fortogna.html"},
+
+    {src:"img/codissago/2.jpg", link:"codissago.html"},
+
+    {src:"img/modolo-t/1.jpg", link:"modolo-t.html"}
+
+];
+
+const gallery = document.getElementById("random-gallery");
+
+const randomizzate = [...immagini]
+    .sort(() => Math.random() - 0.5);
+
+randomizzate.forEach(img => {
+
+    const a = document.createElement("a");
+    a.href = img.link;
+    a.className = "project";
+
+    const image = document.createElement("img");
+    image.src = img.src;
+    image.alt = "";
+
+    a.appendChild(image);
+    gallery.appendChild(a);
+
+});
+
+</script>
 
 </body>
 </html>
